@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   web:
-    build: ./frontend
+    image: 490004637952.dkr.ecr.eu-north-1.amazonaws.com/first-ecr:frontend
     depends_on:
       - api
     ports:
@@ -9,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    build: ./backend
+    image: 490004637952.dkr.ecr.eu-north-1.amazonaws.com/first-ecr:backend
     depends_on:
       - mongo
     ports:
